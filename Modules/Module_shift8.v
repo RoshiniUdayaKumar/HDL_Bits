@@ -16,7 +16,7 @@ module top_module (
     my_dff8 inst3(clk,w2,w3);
     
     //multiplexer
-    always @(*) begin
+    always @(d,w1,w2,w2) begin
         case(sel) 
             2'b00: q<=d;  //use non-blocking, since its used inside a procedural statement 
             2'b01: q<=w1;
