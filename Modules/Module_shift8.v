@@ -18,10 +18,10 @@ module top_module (
     //multiplexer
     always @(d,w1,w2,w2) begin
         case(sel) 
-            2'b00: q<=d;  //use non-blocking, since its used inside a procedural statement 
-            2'b01: q<=w1;
-            2'b10: q<=w2;
-            2'b11: q<=w3;
+            2'b00: q=d;  //using blocking assignment for a combinational circuit
+            2'b01: q=w1;
+            2'b10: q=w2;
+            2'b11: q=w3;
         endcase        
     end
     
