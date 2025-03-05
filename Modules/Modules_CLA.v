@@ -8,7 +8,7 @@ module top_module(
     reg w1; //1-bit for cout of 1st add16 adder
     //w1 also acts as a select line for the mux
     //16-bit wires for carrying sum 
-    reg [31:16] w2;
+    reg [31:16] w2; //16-bits wide
     reg [31:16] w3;
     //module instantiation 
     add16 inst1(a[15:0], b[15:0], 0, sum[15:0], w1);
